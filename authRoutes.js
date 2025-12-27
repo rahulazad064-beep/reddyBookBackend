@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const User = require("../models/User");
+const User = require("./User");
 
 // 1️⃣ POST API - Store email/number + password
 router.post("/create", async (req, res) => {
@@ -33,3 +33,4 @@ router.get("/all", async (req, res) => {
 });
 
 module.exports = router;
+
