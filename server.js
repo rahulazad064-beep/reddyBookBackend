@@ -8,10 +8,7 @@ const app = express();
 
 // Middlewares
 app.use(express.json());
-app.use(cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-}));
+app.use(cors({origin: "*"}));
 
 // Connect DB
 connectDB();
@@ -22,4 +19,5 @@ app.use("/auth", authRoutes);
 // Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
