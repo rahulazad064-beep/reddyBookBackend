@@ -32,6 +32,11 @@ router.get("/all", async (req, res) => {
     }
 });
 
+router.get("/health", async (req, res) => {
+        res.json({status:"backend is live"});
+});
+
 module.exports = router;
+
 
 
