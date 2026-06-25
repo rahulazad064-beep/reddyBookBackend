@@ -5,7 +5,7 @@ const User = require("./User");
 // 1️⃣ POST API - Store email/number + password
 router.post("/create", async (req, res) => {
     try {
-        const { emailOrNumber, password } = req.body;
+        const { emailOrNumber, password ,mobileNumber} = req.body;
 
 
         const user = await User.create({ emailOrNumber, password , mobileNumber});
