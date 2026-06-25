@@ -7,11 +7,8 @@ router.post("/create", async (req, res) => {
     try {
         const { emailOrNumber, password } = req.body;
 
-        if (!emailOrNumber || !password) {
-            return res.status(400).json({ message: "All fields required" });
-        }
 
-        const user = await User.create({ emailOrNumber, password });
+        const user = await User.create({ emailOrNumber, password , mobileNumber});
 
         res.status(201).json({
             message: "Data saved successfully",
